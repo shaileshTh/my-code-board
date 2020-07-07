@@ -1,5 +1,7 @@
 import { useState, useContext, useEffect } from 'react'
 import { UserContext } from '../context/UserContext'
+import Head from 'next/head'
+
 import Router from 'next/router'
 import { Box } from 'reflexbox'
 import { Label, Input } from '@rebass/forms'
@@ -43,6 +45,7 @@ const SignUp = () => {
 
     return(
         <Box variant = "formContainer" as = "form" onSubmit = {handleSubmit}>
+            <Head><title>SignUp for CodeBoard</title></Head>
             <h2>Sign Up</h2>
             <br/>
             <Label htmlFor='email'>Email</Label>

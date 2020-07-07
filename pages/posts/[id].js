@@ -1,5 +1,7 @@
 import fetch from 'isomorphic-unfetch'
 import { useContext, useState } from 'react'
+import Head from 'next/head'
+
 import Router from 'next/router'
 import axios from 'axios'
 import styled from '@emotion/styled';
@@ -28,6 +30,9 @@ const Post = ({post}) => {
 
     return (
         <Box variant = "container">
+            <Head>
+                <title>{post.post_title}</title>
+            </Head>
             <Box width = {{_: "100%", md: "80%"}} variant = "post">
                 <SingleCard post = {post} />
                 {user &&

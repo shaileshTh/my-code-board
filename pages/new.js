@@ -1,5 +1,7 @@
 import { useState, useContext } from 'react'
 import { Box } from 'reflexbox'
+import Head from 'next/head'
+
 import styled from '@emotion/styled'
 import Router from 'next/router'
 import { Label, Input, Textarea } from '@rebass/forms'
@@ -52,6 +54,9 @@ const New = () => {
 
     return(
         <Box variant = "formContainer" as = "form" onSubmit = {handleSubmit}>
+            <Head>
+                <title>Add a new Post</title>
+            </Head>
             <h2>Create a Post</h2>
             <br/>
             <Label htmlFor='title'>Title</Label>

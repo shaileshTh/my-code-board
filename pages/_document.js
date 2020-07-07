@@ -10,7 +10,7 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
-            <title>CodeBoard</title>
+            {/* <title>CodeBoard</title> */}
         </Head>
         <body>
           <Main />

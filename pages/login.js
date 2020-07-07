@@ -1,4 +1,6 @@
 import { useState, useContext, useEffect } from 'react'
+import Head from 'next/head'
+
 import Router from 'next/router'
 import { UserContext } from '../context/UserContext'
 import { Box } from 'reflexbox'
@@ -44,6 +46,7 @@ const LogIn = () => {
 
     return(
         <Box variant = "formContainer" as = "form" onSubmit = {handleSubmit}>
+            <Head><title>Login to CodeBoard</title></Head>
             <h2>Log In</h2>
             <br/>
             <Label htmlFor='email'>Email</Label>

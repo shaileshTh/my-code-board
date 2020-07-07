@@ -1,14 +1,17 @@
+import { Flex, Box } from 'reflexbox'   
+import Card from 'components/Card'
+import Link from 'next/link'
+import Head from 'next/head'
 import fetch from 'isomorphic-unfetch'
 
-import Card from 'components/Card'
-
-import { Flex, Box } from 'reflexbox'   
-import Link from 'next/link'
 
 const HomePage = ({ posts }) => {
     return(
     // max-width: 960px; width: 100%; margin: 0 auto; padding: 30px;
     <Box variant = "container">
+        <Head>
+            <title>CodeBoard Public Posts</title>
+        </Head>
         <Flex justifyContent = "space-between" flexDirection = {{_: "column"}}>
             {posts.map(post => (
                 <Box key = {post.id} width = {{_: "100%", md: "80%"}} variant = "post">
